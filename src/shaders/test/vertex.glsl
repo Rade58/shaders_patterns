@@ -19,6 +19,8 @@ varying vec2 vUv;
 
 attribute vec3 position;
 
+
+// new varying we are creating
 varying float vElevation;
 
 
@@ -32,7 +34,7 @@ void main(){
   
   float elevation = sin(modelPosition.x * uFrequency.x - uTime) * 0.1;
   elevation += sin(modelPosition.y * uFrequency.y - uTime) * 0.1;
-  
+  //
 
   modelPosition.z += elevation;
 

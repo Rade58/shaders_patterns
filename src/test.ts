@@ -3,8 +3,8 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/setup/vertex.glsl";
-import fragmentShader from "./shaders/setup/fragment.glsl";
+import vertexShader from "./shaders/test/vertex.glsl";
+import fragmentShader from "./shaders/test/fragment.glsl";
 
 // -------------- Setup -----------------
 
@@ -46,11 +46,11 @@ if (canvas) {
 
   // loaders
 
-  /* const textureLoader = new THREE.TextureLoader();
+  const textureLoader = new THREE.TextureLoader();
 
   const flagTexture = textureLoader.load("textures/flag.serbia.jpg");
 
-  console.log({ flagTexture }); */
+  console.log({ flagTexture });
   // -------------------------------------------------------------------
   // -------------------------------------------------------------------
 
@@ -111,15 +111,15 @@ if (canvas) {
         value: new THREE.Color("crimson"),
       },
       // passing texture as a uniform
-      // uTexture: {
-      // value: flagTexture,
-      // },
+      uTexture: {
+        value: flagTexture,
+      },
     },
   });
 
   const mesh = new THREE.Mesh(geometry, material);
 
-  // mesh.scale.y = 2 / 3;
+  mesh.scale.y = 2 / 3;
 
   scene.add(mesh);
 
