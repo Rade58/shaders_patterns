@@ -2,7 +2,7 @@ precision mediump float;
 // precision highp float;
 
 
-varying vec2 vUv;
+// varying vec2 vUv;
 
 
 uniform vec3 uColor;

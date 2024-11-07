@@ -98,14 +98,14 @@ if (canvas) {
     side: THREE.DoubleSide,
 
     uniforms: {
-      uFrequency: {
+      /* uFrequency: {
         //
         value: new THREE.Vector2(10, 5),
       },
       //
       uTime: {
         value: 0,
-      },
+      }, */
       //
       uColor: {
         value: new THREE.Color("crimson"),
@@ -125,7 +125,7 @@ if (canvas) {
 
   // let's add gui
 
-  gui
+  /* gui
     .add(material.uniforms["uFrequency"].value, "x")
     .name("uFrequency x")
     .min(0)
@@ -136,7 +136,7 @@ if (canvas) {
     .name("uFrequency y")
     .min(0)
     .max(15)
-    .step(0.001);
+    .step(0.001); */
 
   // -------------------------------------------------------------
   // -------------------------------------------------------------
@@ -311,7 +311,7 @@ if (canvas) {
     ); */
 
     // we are altering mentioned uniform here
-    material.uniforms["uTime"].value = elapsed;
+    // material.uniforms["uTime"].value = elapsed;
 
     // for dumping to work
     orbit_controls.update();
