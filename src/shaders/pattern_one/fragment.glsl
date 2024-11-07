@@ -23,6 +23,11 @@ void main() {
   // this is the same  
   // gl_FragColor = vec4(vUv.x, vUv.y, 1.0, 1.0);
   // as this
-  gl_FragColor = vec4(vUv, 1.0, 1.0);
+  // gl_FragColor = vec4(vUv, 1.0, 1.0);
+  // or same as this
+  gl_FragColor = vec4(vUv.xy, 1.0, 1.0);
+  
+// this patter is famous because you can see it ins ome benchmark
+// tests /i think
 
 }
