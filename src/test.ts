@@ -6,7 +6,7 @@ import { OrbitControls } from "three/examples/jsm/Addons.js";
 import vertexShader from "./shaders/test/vertex.glsl";
 import fragmentShader from "./shaders/test/fragment.glsl";
 
-// -------------- Setup -----------------
+// -------------- test 1 -----------------
 
 // ------------------------------------------------------------
 

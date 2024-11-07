@@ -7,7 +7,9 @@ import vertexShader from "./shaders/setup/vertex.glsl";
 import fragmentShader from "./shaders/setup/fragment.glsl";
 
 // -------------- Setup -----------------
-
+// Because we intend to use uv coordinates in fragment shader
+// we jave sent uv as vUv vector to from vertex to fragment shader
+// as a varying
 // ------------------------------------------------------------
 
 // ------------------------------------
