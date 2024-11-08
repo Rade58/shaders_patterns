@@ -8,7 +8,8 @@ import fragmentShader from "./shaders/pattern_two/fragment.glsl";
 
 // ---- Drawing shapes with uv coordinates: Pattern two ----
 //
-
+// this patter of fragment shader is seen in many tests
+// when people test something in video games
 // ---------------------------------------------------------
 
 // ------------------------------------

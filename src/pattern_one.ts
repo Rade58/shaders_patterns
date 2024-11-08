@@ -8,7 +8,12 @@ import fragmentShader from "./shaders/pattern_one/fragment.glsl";
 
 // ---- Drawing shapes with uv coordinates: Pattern one ----
 //
-
+// we are going to do this in fragment shader
+// where we are going to send uv as a varying from coresponding
+// vertex shader to a fragment shader
+//
+// values ogf uv coordinet goes from 0.0 to 1.0, over x and y axis
+// it's a vector 2 instance
 // ---------------------------------------------------------
 
 // ------------------------------------
