@@ -25,6 +25,6 @@ void main() {
   // or we can use much simpler shorthand syntax
   gl_FragColor = vec4(vUv.xxx, 1.0);
   // or like this
-  gl_FragColor = vec4(vUv.yyy, 1.0);
+  // gl_FragColor = vec4(vUv.yyy, 1.0);
   
 }
