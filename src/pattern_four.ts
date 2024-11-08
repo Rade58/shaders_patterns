@@ -3,16 +3,13 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/strength/vertex.glsl";
-import fragmentShader from "./shaders/strength/fragment.glsl";
+import vertexShader from "./shaders/pattern_four/vertex.glsl";
+import fragmentShader from "./shaders/pattern_four/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates:
-// isolating uv coordiante in separate variable ----
+// ---- Drawing shapes with uv coordinates: Pattern four ----
 //
-// A grayscale pattern but we are going to isolate some uv coordinate
-// in separate float variable (called strength)
-// and then use it in inside gl_FragColor, indirectlly like that
-// Why? I guess we are going to use strength to calculate something
+// A grayscale pattern but
+// color nuances are changing over y
 // -----------------------------------------------------------
 
 // ------------------------------------
