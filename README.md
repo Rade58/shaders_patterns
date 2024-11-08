@@ -28,3 +28,47 @@ fragment shader program is executed for every pixel, not for some kind of space 
 for other values try to use uv coordinates
 
 you will maybe have better understanding
+
+# Something I noticed
+
+## Diagonal color mixing
+
+For these I set blue to be 0.0, so it would be easier to notice things
+
+This is the one famous combination people tend to use in testing for games
+
+since we used x and y color mixing will go diagonally on the plane
+
+green will be on the left top, and red will be on the right bottom
+
+```glsl
+gl_FragColor = vec4(vUv, 0.0, 1.0);
+```
+
+we can invert this by changing places of coordinates, since above, vUv is the same as vUv.xy
+
+Here we can inert it to be vUv.yx which is esencially a new vector two: vec2(vUv.y, vUv.x)
+
+```glsl
+gl_FragColor = vec4(vUv.yx, 0.0, 1.0);
+```
+
+## Inversion can be done by substracting from 1.0
+
+These two are same
+
+```
+gl_FragColor = vec4(vUv.yx, 0.0, 1.0);
+```
+
+```
+gl_FragColor = vec4(1.0 - vUv.xy, 0.0, 1.0);
+```
+
+## These will give you completly different colors doesn't matter use use them for same `r g b` arguments
+
+Thes is `vUv.xx` will be different from `vUv.yy` and differet from `vUv.xy`
+
+Only `vUv.xy` and `vUv.yx` will have same color mix but inverted as I once said, but it will be completelly diffrent color nuance or mix from `vUv.xx`
+
+Also `vUv.xx` and `vUv.yy` wil produce same color mix or nuance but inverted

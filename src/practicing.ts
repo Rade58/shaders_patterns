@@ -65,7 +65,7 @@ if (canvas) {
     0.1,
     100
   );
-  camera.position.set(0.5, 0.5, 1);
+  camera.position.set(0, 0, 1);
   scene.add(camera);
 
   //------------------------------------------------
