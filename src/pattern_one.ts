@@ -14,6 +14,12 @@ import fragmentShader from "./shaders/pattern_one/fragment.glsl";
 //
 // values ogf uv coordinet goes from 0.0 to 1.0, over x and y axis
 // it's a vector 2 instance
+
+// we will display color pattern that people always display
+// you can consider it as hello world of fragment shader
+
+// we use uv cooordinates for red and green arguments
+// and for blu we will just pass maximum of 1.0
 // ---------------------------------------------------------
 
 // ------------------------------------

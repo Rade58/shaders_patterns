@@ -4,8 +4,8 @@ precision mediump float;
 // we have sent uv coordinates from vertex to shader
 varying vec2 vUv;
 
-// we will use the vUv in nesxt lessons in order to draw shapes
-
+// we will use the vUv in next lessons in order to draw shapes
+// with it's coordinates
 
 uniform vec3 uColor;
 

@@ -17,6 +17,11 @@ void main() {
   // let's use y
   float strength = vUv.y;
  
+  // it will produce some gray color mix
+  // if we would use vUv.x instead, color would loook the same
+  // but change would go over x axis
+
+
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   
   
