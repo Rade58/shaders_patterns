@@ -3,10 +3,10 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/pattern_one/vertex.glsl";
-import fragmentShader from "./shaders/pattern_one/fragment.glsl";
+import vertexShader from "./shaders/hello_world/vertex.glsl";
+import fragmentShader from "./shaders/hello_world/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern one ----
+// ---- Drawing shapes with uv coordinates: Pattern one: Hello World ----
 //
 // we are going to do this in fragment shader
 // where we are going to send uv as a varying from coresponding
@@ -17,6 +17,7 @@ import fragmentShader from "./shaders/pattern_one/fragment.glsl";
 
 // we will display color pattern that people always display
 // you can consider it as hello world of fragment shader
+// in threejs
 
 // we use uv cooordinates for red and green arguments
 // and for blu we will just pass maximum of 1.0

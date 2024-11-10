@@ -3,13 +3,15 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/pattern_two/vertex.glsl";
-import fragmentShader from "./shaders/pattern_two/fragment.glsl";
+import vertexShader from "./shaders/foo_bar/vertex.glsl";
+import fragmentShader from "./shaders/foo_bar/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern two ----
+// ---- Drawing shapes with uv coordinates: Pattern two: foo_bar ----
 //
 // this patter of fragment shader is seen in many tests
 // when people test something in video games
+// I think it's used in benchmarks
+
 // ---------------------------------------------------------
 
 // ------------------------------------

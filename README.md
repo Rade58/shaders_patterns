@@ -72,3 +72,5 @@ Thes is `vUv.xx` will be different from `vUv.yy` and differet from `vUv.xy`
 Only `vUv.xy` and `vUv.yx` will have same color mix but inverted as I once said, but it will be completelly diffrent color nuance or mix from `vUv.xx`
 
 Also `vUv.xx` and `vUv.yy` wil produce same color mix or nuance but inverted
+
+# The rest of info is in fragment shader comments

@@ -27,7 +27,6 @@ void main() {
   // or same as this
   gl_FragColor = vec4(vUv.xy, 1.0, 1.0);
   
-// this patter is famous because you can see it in some benchmark
-// tests, as I heard from workshop author
+
 
 }
