@@ -3,14 +3,14 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/pattern_five/vertex.glsl";
-import fragmentShader from "./shaders/pattern_five/fragment.glsl";
+import vertexShader from "./shaders/little_black_more_white/vertex.glsl";
+import fragmentShader from "./shaders/little_black_more_white/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern five ----
+// ---- Drawing shapes with uv coordinates: little black, more white ----
 //
-// grayscale that changes over y but it is oposite direction
-// in this case you need to do:       1.0 - vUv.y
-// in order to get wanted effect
+// grayscale that changes over y
+// but it is entirely white but with little blackness
+
 // -----------------------------------------------------------
 
 // ------------------------------------
