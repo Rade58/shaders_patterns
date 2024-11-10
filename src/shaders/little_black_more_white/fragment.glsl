@@ -23,15 +23,15 @@ void main() {
 
   // little black will be on the bottom
  
-  // gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   
-  
-  // we can invert this situation by substracting from 1.0
+  // we can invert this situation by substracting from 1.0, but we won;t
+  // strength = 1.0 - strength;
+  // If we would do this
+  // black would  take the most place on the plane
+  // only on the bottom we would have one white stripe so to speak
 
-  strength = 1.0 - strength;
 
-  // now black takes the most place on the plane
-  // only on the bottom we have white stripe so to speak 
+
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
 
