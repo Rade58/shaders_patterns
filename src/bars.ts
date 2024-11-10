@@ -3,22 +3,24 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/seven/vertex.glsl";
-import fragmentShader from "./shaders/seven/fragment.glsl";
+import vertexShader from "./shaders/bars/vertex.glsl";
+import fragmentShader from "./shaders/bars/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern seven ----
+// ---- Drawing shapes with uv coordinates: white bars with modulo ----
 //
 // grayscale where you basically have a something like bars
 // where you have white bars divided by little dark lines
 
-// we need to use modulo for this
+// we need to use `modulo` for this
 // What is modulo?
-// In javascript you tipically use % operator to calculate
+// In javascript you tipically use `%` operator to calculate
 // reminder when deviding
 // tipically you devide by two
 // if there is a reminder, number isn't even
+
 // when drawing, we would use this logic to draw
-// some kind of strips
+// some kind of stripes, or better to say to paint odd
+// segments to wite and to paint even segments to black
 
 // in gls, we don't have %, we have `mod` function
 

@@ -25,7 +25,7 @@ void main() {
  
   
   // we can invert this situation by substracting from 1.0, but we won;t
-  // strength = 1.0 - strength;
+  strength = 1.0 - strength;
   // If we would do this
   // black would  take the most place on the plane
   // only on the bottom we would have one white stripe so to speak
