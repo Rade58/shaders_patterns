@@ -25,7 +25,7 @@ void main() {
   // we have set rgb value to 0.5
   // gl_FragColor = vec4(0.5, 0.5, 0.5, 1.0);
   // or more brighter to 0.7
-  gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0);
+  // gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0);
 
   // well, to acomplish mentioned grayscale pattern
   // we use uv coordinates
@@ -36,15 +36,20 @@ void main() {
   // well if we use same uv coordinate for the rgb
   // it should come out as gray
 
-  gl_FragColor = vec4(vUv.x, vUv.x, vUv.x, 1.0);
+  // gl_FragColor = vec4(vUv.x, vUv.x, vUv.x, 1.0);
   // we really got a gradient where left is pure black and right is
   // pure white and middle space which is most of the space
   // holds all gray nuances between black and white
 
 
-  // or we can use much simpler shorthand syntax
+  // or we can write it much simpler shorthand syntax
   // gl_FragColor = vec4(vUv.xxx, 1.0);
-  // or like this
-  // gl_FragColor = vec4(vUv.yyy, 1.0);
+  
+  // or we can invert it like this (we change direction like this)
+
+  // gl_FragColor = vec4(1.0 - vUv.xxx, 1.0);
+  
+  // or we can display grayscale pattern over y axis
+  gl_FragColor = vec4(vUv.yyy, 1.0);
   
 }
