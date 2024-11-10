@@ -3,12 +3,21 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/pattern_three/vertex.glsl";
-import fragmentShader from "./shaders/pattern_three/fragment.glsl";
+import vertexShader from "./shaders/grayscale/vertex.glsl";
+import fragmentShader from "./shaders/grayscale/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern three ----
+// ---- Drawing shapes with uv coordinates: A grayscale pattern----
 //
-// A grayscale pattern
+// We get this grayscale pattern when we set `vUv.x` or `vUv.y`
+// to be the value for red, for green and for blue
+
+// It makes sense why is gray coloer because when we set same value
+// for rgb, we get something gray, and the closer to 1.0 it is more white,
+// if it's closer to the 0.0 it is more dark
+
+// a grayscale is just white to black pattern
+// or vice versa
+
 // -----------------------------------------------------------
 
 // ------------------------------------
