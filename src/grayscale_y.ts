@@ -3,13 +3,15 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/pattern_four/vertex.glsl";
-import fragmentShader from "./shaders/pattern_four/fragment.glsl";
+import vertexShader from "./shaders/grayscale_y/vertex.glsl";
+import fragmentShader from "./shaders/grayscale_y/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern four ----
+// ---- Drawing shapes with uv coordinates: grayscale over y ----
 //
 // A grayscale pattern but
 // color nuances are changing over y
+// We already showed this earlier but
+// let's do it again
 // -----------------------------------------------------------
 
 // ------------------------------------
