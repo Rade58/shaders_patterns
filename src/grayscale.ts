@@ -6,7 +6,7 @@ import { OrbitControls } from "three/examples/jsm/Addons.js";
 import vertexShader from "./shaders/grayscale/vertex.glsl";
 import fragmentShader from "./shaders/grayscale/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: A grayscale pattern----
+// ---- Drawing shapes with uv coordinates: A grayscale pattern ----
 //
 // We get this grayscale pattern when we set `vUv.x` or `vUv.y`
 // to be the value for red, for green and for blue

@@ -9,10 +9,12 @@ import fragmentShader from "./shaders/strength/fragment.glsl";
 // ---- Drawing shapes with uv coordinates:
 // isolating uv coordiante in separate variable ----
 //
-// A grayscale pattern but we are going to isolate some uv coordinate
-// in separate float variable (called strength)
-// and then use it in inside gl_FragColor, indirectlly like that
+// A grayscale pattern but we are going to isolate some
+// of the uv coordinates in separate float variable (called strength)
+// and then use it in inside gl_FragColor, indirectlly like that.
+
 // Why? I guess we are going to use strength to calculate something
+// in next lessons
 // -----------------------------------------------------------
 
 // ------------------------------------
