@@ -24,7 +24,7 @@ void main() {
   // from top to bottom
   // gl_FragColor = vec4(vUv.xx, 0.0, 1.0);
 
-  // and again, same color but fading in oposite direction
+  // and again, same color but fading in oposite direction vertically
   gl_FragColor = vec4(1.0 - vUv.yy, 0.0, 1.0);
 
 
