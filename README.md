@@ -19,19 +19,15 @@ When we use these coordinates as a values in `gl_FragColor` vector4 instance, **
 
 This is not hard to see when you try passing uv coordinates as a arguments when creating vector 4 instance that is gl_FragColor
 
-Yes. But what is very hard is how to get wanted coloring effect you imagined
+fragment shader program is executed for every pixel, not for some kind of space between vertices likw I imagined before, in previous lessons wher we didn't place accent on fragment shader. it is for every pixel indeed
 
-fragment shader program is executed for every pixel, not for some kind of space between vertices. it is for every pixel
+## When trying to practice at first, try to eliminate one color by adding 0.0 as an argument to rgb
 
-## When trying to practice at first try to eliminate one color by adding 0.0 as an argument to rgb
+and for other two rgb values try to use uv coordinates
 
-for other values try to use uv coordinates
-
-you will maybe have better understanding
+you will maybe have better understanding when you see the produced effect
 
 # Something I noticed
-
-## Diagonal color mixing
 
 For these I set blue to be 0.0, so it would be easier to notice things
 
@@ -64,13 +60,3 @@ gl_FragColor = vec4(vUv.yx, 0.0, 1.0);
 ```
 gl_FragColor = vec4(1.0 - vUv.xy, 0.0, 1.0);
 ```
-
-## These will give you completly different colors doesn't matter use use them for same `r g b` arguments
-
-Thes is `vUv.xx` will be different from `vUv.yy` and differet from `vUv.xy`
-
-Only `vUv.xy` and `vUv.yx` will have same color mix but inverted as I once said, but it will be completelly diffrent color nuance or mix from `vUv.xx`
-
-Also `vUv.xx` and `vUv.yy` wil produce same color mix or nuance but inverted
-
-# The rest of info is in fragment shader comments
