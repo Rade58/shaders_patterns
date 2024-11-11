@@ -19,10 +19,24 @@ import fragmentShader from "./shaders/bars/fragment.glsl";
 // if there is a reminder, number isn't even
 
 // when drawing, we would use this logic to draw
-// some kind of stripes, or better to say to paint odd
-// segments to wite and to paint even segments to black
+// some kind of stripes, or a grid which I assume we will do latter
+// but now we just want to draw or paint tripes
 
 // in gls, we don't have %, we have `mod` function
+
+// arguments are two floats: float a and float b
+// return value of the function:
+//                                a - b * floor(a/b)
+
+// if we want stripes we will use 1.0 as `b` value
+// since that is max value for the some uv coordinate
+
+// and for `a` we sat uv.x or uv.y; otr better to say we
+// se current coordinate
+
+// and we will get appropriate value, or we
+
+//
 
 // -----------------------------------------------------------
 

@@ -60,3 +60,57 @@ gl_FragColor = vec4(vUv.yx, 0.0, 1.0);
 ```
 gl_FragColor = vec4(1.0 - vUv.xy, 0.0, 1.0);
 ```
+
+# Modulo
+
+The `mod` function in GLSL (including Three.js shaders) is similar to the modulo operator in other programming languages. Let me explain how it works:
+
+The mod function takes two arguments:
+
+```glsl
+float mod(float x, float y)
+vec2 mod(vec2 x, vec2 y)  // Also works with vectors
+vec3 mod(vec3 x, vec3 y)
+vec4 mod(vec4 x, vec4 y)
+```
+
+Arguments:
+
+1. `x`: The dividend (number being divided)
+2. `y`: The divisor (number we're dividing by)
+
+The function returns the remainder of x/y, where the result has the same sign as y. The mathematical formula is:
+
+```
+mod(x,y) = x - y * floor(x/y)
+```
+
+Common uses in shaders:
+
+1. Creating repeating patterns:
+
+```glsl
+float pattern = mod(uv.x, 0.1); // Repeats every 0.1 units
+```
+
+2. Wrapping values within a range:
+
+```glsl
+float wrapped = mod(value, 1.0); // Keeps value between 0 and 1
+```
+
+3. Creating grid effects:
+
+```glsl
+vec2 grid = mod(uv * 10.0, 1.0); // Creates a 10x10 grid
+```
+
+Visual effects it can produce:
+
+- Repeating stripes or patterns
+- Tiling textures
+- Circular/radial patterns when used with angle calculations
+- Grid-based effects
+- Looping animations
+
+Would you like to see a specific example of how to use mod to create a particular visual effect?
