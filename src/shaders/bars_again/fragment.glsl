@@ -22,6 +22,15 @@ void main() {
   // you would think that we would accomplish same result
   // un terms of number of segmants we would, but our bars would be painted
   // in darker gray nuances
+
+  // how we can we again try having lighter nuances of gray
+
+  // let's try substracting from 1.0
+  strength = 1.0 - strength;
+  // we will get something but much more lighter then we want
+  // but it will look cool I guess, it will look like
+  // blinds on the windows of commie block
+
   
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   
