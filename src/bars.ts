@@ -9,7 +9,7 @@ import fragmentShader from "./shaders/bars/fragment.glsl";
 // ---- Drawing shapes with uv coordinates: white bars with modulo ----
 //
 // grayscale where you basically have a something like bars
-// where you have white bars divided by little dark lines
+// where you have white and black pattern but it is repeating
 
 // we need to use `modulo` for this
 // What is modulo?
@@ -37,6 +37,8 @@ import fragmentShader from "./shaders/bars/fragment.glsl";
 // and we will get appropriate value, or we
 
 //
+// Look at readme file where I presented some values that we get
+// when calculating modulo so it will be easier to see actually what is modulo doing
 
 // -----------------------------------------------------------
 

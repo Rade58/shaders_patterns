@@ -11,8 +11,7 @@ varying vec3 vPosition;
 
 void main() {
   
-
-  // ok, we know that this, if not messed with will produce
+  // ok, we know that this, if not messed with, it will produce
   // bars pattern
   float strength = mod(vUv.y * 10.0, 1.0);
   

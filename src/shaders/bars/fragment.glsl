@@ -16,7 +16,8 @@ void main() {
   // and the rest is white
   // float strength = vUv.y * 10.0;
 
-  // let's first define what is divisor or number
+  // since we plan to use modulo
+  // let's first explain what is divisor or number
   // we are deviding by (second argument)
   // -    should be maximum of the value of the uv coordinate
   // and we need dividend
@@ -38,9 +39,12 @@ void main() {
   // but let's multiply mentioned coordinate by 10
 
   float strength = mod(vUv.y * 10.0, 1.0);
-  
-  // in this case we are not doing anything special with this modulo
-  // we will just have repeting color mixes across y
+  // this above, produces only two possible values
+  // a reminder of 0.5, or no remider which is result: 0.0
+
+  // which means that color mix producet at the end will only be built
+  // with these numbers a nuances between 0.0 and 0.5 
+
 
   // we will have 10 stripes since I multiplied with 10
 
