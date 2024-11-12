@@ -44,10 +44,11 @@ void main() {
 
   // we will have 10 stripes since I multiplied with 10
 
-  // we could have gone other way around of lowering divisor
-  // from 1.0 to 0.5 for example but let's not do that
-  // in any new example ,let's multiply be dividend like we already did
-
+  // if we would play with these numbers above (dividend and divisor)
+  // we wouldn't just lower or increase number of bars
+  // also shades of gray would also change; so that is
+  // something to pay attentiont to
+  // in next lesson we will test that out
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   
