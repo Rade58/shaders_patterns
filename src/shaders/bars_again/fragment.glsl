@@ -31,6 +31,11 @@ void main() {
   // but it will look cool I guess, it will look like
   // blinds on the windows of commie block
 
+  // let's get back on nuances we previously had
+  // but let's now change direction by using x of uv coordinates
+
+  strength = mod(vUv.x * 20.0, 1.0);
+
   
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   
