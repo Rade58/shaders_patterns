@@ -3,18 +3,22 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/eight/vertex.glsl";
-import fragmentShader from "./shaders/eight/fragment.glsl";
+import vertexShader from "./shaders/stripes/vertex.glsl";
+import fragmentShader from "./shaders/stripes/fragment.glsl";
 
-// ---- Drawing shapes with uv coordinates: Pattern eight ----
+// ---- Drawing shapes with uv coordinates: stripes pattern ----
+// ths will be a black and white stripes pattern
 //
-// grayscale where you basically have a something like bars
-// where you have white bars divided by little dark places
+// you basically have a something like bars
+// where you have white bar after it goes black bar
 
 // we are using modulo for this again like in previous lesson
-// bud this time we are going to use if else statement
+// but based on it's result we will define "strenght"
+
+// and this time we are going to use `if else statement`
 // since we will apply different thing depending on modulo result
-// but conditionals are bad for performances
+
+// but **** conditionals are bad for performances ****
 // so people tend not to use them, or very rearlly
 
 // -----------------------------------------------------------
