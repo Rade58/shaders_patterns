@@ -21,6 +21,7 @@ void main() {
   // but we need to use abs function
   // because we need absolute value, we can't have negative values 
 
+  // it makes sense 
   float strength = abs(vUv.x - 0.5);
 
 

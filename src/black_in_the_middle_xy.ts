@@ -3,14 +3,18 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/black_in_the_middle/vertex.glsl";
-import fragmentShader from "./shaders/black_in_the_middle/fragment.glsl";
+import vertexShader from "./shaders/black_in_the_middle_xy/vertex.glsl";
+import fragmentShader from "./shaders/black_in_the_middle_xy/fragment.glsl";
 
-// ---- pattern - gradient:black on the middle ----
+// ---- pattern - gradient:
+//                  black on the middle but over x and over y ----
 //
-// we want black in the middle and gray nuances to go to the left and
-// right till they reach white
+// we want black in the middle and gray nuances to go to the
+// left and right till they reach white
+
+// also we want this over other axis too
 //
+// we will use min function for the first time for this
 // -----------------------------------------------------------
 
 // ------------------------------------

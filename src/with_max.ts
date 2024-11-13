@@ -3,13 +3,13 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/black_in_the_middle/vertex.glsl";
-import fragmentShader from "./shaders/black_in_the_middle/fragment.glsl";
+import vertexShader from "./shaders/with_max/vertex.glsl";
+import fragmentShader from "./shaders/with_max/fragment.glsl";
 
-// ---- pattern - gradient:black on the middle ----
-//
-// we want black in the middle and gray nuances to go to the left and
-// right till they reach white
+// ---- pattern - gradient: ----
+
+// previous example, we are just using max instead of min function
+// to get something
 //
 // -----------------------------------------------------------
 
