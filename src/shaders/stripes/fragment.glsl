@@ -23,11 +23,15 @@ void main() {
 
   // this also means we won't have gradient
  
+  // you can omit curly brackets if you want but I like using them
   if(strength < 0.5){
     strength = 0.0; // this will create entirely black color
   }else{
     strength = 1.0; // this will create entirely white color
   }
+
+  // but don't use if else in your own projects because
+  // conditions are bad for performance
  
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
   

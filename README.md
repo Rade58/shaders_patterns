@@ -142,3 +142,56 @@ The values repeat every 0.1 in UV space because we multiplied by 10
 The final value is always between 0.0 and 1.0 because of the modulo 1.0
 
 This is why you'd see 10 repeating gradient strips from bottom to top of your texture!
+
+# About `step` function
+
+The `step` function in GLSL (used in Three.js fragment shaders) takes two arguments:
+
+```glsl
+float step(float edge, float x)
+vec2 step(vec2 edge, vec2 x)   // Also works with vectors
+vec3 step(vec3 edge, vec3 x)
+vec4 step(vec4 edge, vec4 x)
+```
+
+Arguments:
+
+1. `edge`: The threshold value
+2. `x`: The value to test
+
+The function returns:
+
+- 0.0 if x < edge
+- 1.0 if x >= edge
+
+It's essentially creating a hard cutoff/threshold, like this:
+
+```glsl
+// These are equivalent:
+float result = step(0.5, x);
+
+// Same as writing:
+float result = (x < 0.5) ? 0.0 : 1.0;
+```
+
+Common uses:
+
+1. Creating sharp edges:
+
+```glsl
+float line = step(0.5, uv.x); // Creates vertical line at 0.5
+```
+
+2. Making binary patterns:
+
+```glsl
+float pattern = step(0.5, mod(uv.x * 10.0, 1.0)); // Creates stripes
+```
+
+3. Masking:
+
+```glsl
+float mask = step(0.1, distance(uv, center)); // Creates circular mask
+```
+
+The step function is particularly useful for creating hard transitions and sharp edges in shaders, as opposed to smooth gradients.
