@@ -17,12 +17,14 @@ void main() {
 
   // idea is to remove something from dividend for wxample 0.2
   // and we did thi fot y uv coordinate
+  // and it needs to be half of the step threshold (threshold of the step)
   float barY = step(0.4, mod(vUv.x * 10.0 - 0.2, 1.0));
   barY *= step(0.8, mod(vUv.y * 10.0, 1.0));
   
   float barX = step(0.8, mod(vUv.x * 10.0, 1.0));
   // and here we can remove the same value
   // and we are doing this for y uv coordinate
+  // and in here it needs to be half of the threshold
   barX *= step(0.4, mod(vUv.y * 10.0 - 0.2, 1.0));
 
   float strength = barX + barY;
