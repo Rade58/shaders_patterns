@@ -3,16 +3,13 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/random_gray_rects/vertex.glsl";
-import fragmentShader from "./shaders/random_gray_rects/fragment.glsl";
+import vertexShader from "./shaders/random_gray_rects_with_offset/vertex.glsl";
+import fragmentShader from "./shaders/random_gray_rects_with_offset/fragment.glsl";
 
-// ---- pattern: random gray rects ----
+// ---- pattern: random gray rects with offset ----
 //
-// -----------------------------------------------------------
-// so we will be using randomness, check this out
-// https://thebookofshaders.com/10/
-// since there is no native random functions
-// we are going to build some
+// we will add offset to uv coordinates
+// which will make our rects inside pattern to be tilted
 // ------------------------------------
 // ------------ gui -------------------
 
