@@ -11,8 +11,8 @@ varying vec3 vPosition;
 
 void main() {
 
-  
-  float strength = step(0.20, max(abs(vUv.x - 0.5), abs(vUv.y - 0.5)));
+  // we just set edge to 0.45 instead of 0.25
+  float strength = step(0.45, max(abs(vUv.x - 0.5), abs(vUv.y - 0.5)));
 
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
