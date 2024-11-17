@@ -31,11 +31,12 @@ vec2 rotate(vec2 uv, float rotation, vec2 mid){
 void main() {
 
 
-  // we added some things to vUv.x also as you can see
-  // almost the same thing we added to the y part
+  // I increased frequency from 30.0 to whatewer number you want
+  // try playing with it
+  // the bigger the number it looks more cool
   vec2 wavedUv = vec2(
-    vUv.x + sin(vUv.y * 30.0) * 0.1, 
-    vUv.y + sin(vUv.x * 30.0) * 0.1
+    vUv.x + sin(vUv.y * 120.0) * 0.1, 
+    vUv.y + sin(vUv.x * 120.0) * 0.1
   );
 
   // instead of original vUv we use one we changed

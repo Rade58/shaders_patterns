@@ -30,16 +30,30 @@ vec2 rotate(vec2 uv, float rotation, vec2 mid){
 
 void main() {
 
+  // we did this white ring in some previous example
+  // float strength = 1.0 - step(0.01, abs(distance(vUv, vec2(0.5)) - 0.25));
+  
 
-  // we added some things to vUv.x also as you can see
-  // almost the same thing we added to the y part
-  vec2 wavedUv = vec2(
-    vUv.x + sin(vUv.y * 30.0) * 0.1, 
-    vUv.y + sin(vUv.x * 30.0) * 0.1
-  );
+  // and we did this in example before current 
+  // float angle = atan(vUv.x - 0.5, vUv.y - 0.5);
+  // angle /= PI * 2.0;
+  // angle += 0.5;
+  // float strength = sin(angle * 100.0);
 
-  // instead of original vUv we use one we changed
-  float strength = 1.0 - step(0.01, abs(distance(wavedUv, vec2(0.5)) - 0.25));
+
+  // we build sinusoid
+  float angle = atan(vUv.x - 0.5, vUv.y - 0.5);
+  angle /= PI * 2.0;
+  angle += 0.5;
+  float sinusoid = sin(angle * 100.0);
+
+
+  // so the radius is 0.25, but we add sinsoid to it and lower the amplitude
+  float radius = 0.25 + sinusoid * 0.02;
+
+  // and use it here
+  float strength = 1.0 - step(0.01, abs(distance(vUv, vec2(0.5)) - radius));
+
 
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);

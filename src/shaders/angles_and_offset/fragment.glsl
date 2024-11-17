@@ -30,16 +30,11 @@ vec2 rotate(vec2 uv, float rotation, vec2 mid){
 
 void main() {
 
-
-  // we added some things to vUv.x also as you can see
-  // almost the same thing we added to the y part
-  vec2 wavedUv = vec2(
-    vUv.x + sin(vUv.y * 30.0) * 0.1, 
-    vUv.y + sin(vUv.x * 30.0) * 0.1
-  );
-
-  // instead of original vUv we use one we changed
-  float strength = 1.0 - step(0.01, abs(distance(wavedUv, vec2(0.5)) - 0.25));
+  // I offseted (decreased) first argument argument by 0.5
+  float angle = atan(vUv.x - 0.5, vUv.y - 0.5);
+ 
+  
+  float strength = angle;
 
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
