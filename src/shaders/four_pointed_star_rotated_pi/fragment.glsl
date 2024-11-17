@@ -8,6 +8,8 @@
 // since it is cheaper than using variables
 #define PI 3.1415926535897932384626433832795
 // no semicolon after it, as you can see
+// this is use when we want to define constant, 
+// a something that doesn't change
 
 
 
@@ -36,8 +38,7 @@ void main() {
   // instead of this to rotate it one-eight of a circle 
   // vec2 rotatedUv = rotate(vUv, 0.8, vec2(0.5));
   // we write this
-  // but I don't think it gives us right angle but it doesn't matter
-  vec2 rotatedUv = rotate(vUv, 0.48 * 180.0/PI, vec2(0.5));
+  vec2 rotatedUv = rotate(vUv, PI/4.0, vec2(0.5));
   
 
   vec2 lightUvX = vec2(rotatedUv.x, (rotatedUv.y - 0.5) * 5.0 + 0.5);
