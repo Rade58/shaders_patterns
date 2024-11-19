@@ -3,29 +3,12 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/perlin_noise/vertex.glsl";
-import fragmentShader from "./shaders/perlin_noise/fragment.glsl";
+import vertexShader from "./shaders/perlin_sharper/vertex.glsl";
+import fragmentShader from "./shaders/perlin_sharper/fragment.glsl";
 
-// ---- pattern: perlin noise ----
+// ---- pattern: perlin noise sharper ----
 //
-// what are some popular perlin noises:
-// https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
-// some of these above might not work because
-// they rely on other dependencies
-
-// and you need also to copy that dependancy
-
-// we are going to use Classic Perlin Noise by Stefan Gustavson
-// https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83#classic-perlin-noise
-// we provide vec2 and we get a float in return
-// and this is 2D noise
-
-// we also need to copy permute function which is depandancy used
-// by mentioned noise function
-
-// Since we are using glslify, in future we won't copy and past
-// but for now we are doing that
-
+// previous example but we use step to make it more sharper
 // ------------------------------------
 // ------------ gui -------------------
 

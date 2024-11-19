@@ -76,11 +76,15 @@ vec2 rotate(vec2 uv, float rotation, vec2 mid){
 void main() {
 
   
-  // float strength = vUv.x;
-
-  // and here we used mentioned noise function
-  float strength = cnoise(vUv * 10.0);
-
+  
+  // float strength = cnoise(vUv * 10.0);
+  // float strength = step(0.0, cnoise(vUv * 10.0));
+  
+  // float strength = abs(cnoise(vUv * 10.0));
+  // strength = 1.0 - strength;
+  
+  // we use sinus as you can see
+  float strength = sin(cnoise(vUv * 10.0) * 20.0);
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
 

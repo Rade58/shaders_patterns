@@ -76,11 +76,15 @@ vec2 rotate(vec2 uv, float rotation, vec2 mid){
 void main() {
 
   
-  // float strength = vUv.x;
+  
+  // float strength = cnoise(vUv * 10.0);
+  // float strength = step(0.0, cnoise(vUv * 10.0));
+  
+  // we just use abs here
+  float strength = abs(cnoise(vUv * 10.0));
 
-  // and here we used mentioned noise function
-  float strength = cnoise(vUv * 10.0);
-
+  // we can also substract it from 
+  strength = 1.0 - strength;
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
 
