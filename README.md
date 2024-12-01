@@ -119,30 +119,6 @@ Visual effects it can produce:
 - Grid-based effects
 - Looping animations
 
-# Let's examine how would modulo produce repeating pattern in case of this: `float strength = mod(vUv.y * 10.0, 1.0);`
-
-Yes! Let's simulate how the values flow through this calculation for different UV y-coordinates, moving from bottom to top of the texture:
-
-```zsh
-vUv.y = 0.0:   0.0 * 10.0 = 0.0   → mod(0.0, 1.0) = 0.0
-vUv.y = 0.1:   0.1 * 10.0 = 1.0   → mod(1.0, 1.0) = 0.0
-vUv.y = 0.15:  0.15 * 10.0 = 1.5  → mod(1.5, 1.0) = 0.5
-vUv.y = 0.2:   0.2 * 10.0 = 2.0   → mod(2.0, 1.0) = 0.0
-vUv.y = 0.25:  0.25 * 10.0 = 2.5  → mod(2.5, 1.0) = 0.5
-vUv.y = 0.3:   0.3 * 10.0 = 3.0   → mod(3.0, 1.0) = 0.0
-vUv.y = 0.35:  0.35 * 10.0 = 3.5  → mod(3.5, 1.0) = 0.5
-vUv.y = 0.4:   0.4 * 10.0 = 4.0   → mod(4.0, 1.0) = 0.0
-```
-
-You can see the pattern:
-
-At every 0.1 increment in UV (1.0 after multiplication), we get back to 0.0
-Halfway between each 0.1 increment (0.05, 0.15, 0.25...), we get 0.5
-The values repeat every 0.1 in UV space because we multiplied by 10
-The final value is always between 0.0 and 1.0 because of the modulo 1.0
-
-This is why you'd see 10 repeating gradient strips from bottom to top of your texture!
-
 # About `step` function
 
 The `step` function in GLSL (used in Three.js fragment shaders) takes two arguments:
